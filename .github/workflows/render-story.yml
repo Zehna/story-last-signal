@@ -43,13 +43,6 @@ jobs:
       fail-fast: false
       matrix:
         shard: [0, 1, 2, 3, 4]
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0, 1, 2, 3, 4]
-    env:
-      START: ${{ matrix.shard * 120 }}
-      END: ${{ matrix.shard * 120 + 119 }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -62,6 +55,11 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ffmpeg sox libegl1 libgl1-mesa-dri
       - name: Install Python deps
         run: pip install numpy pillow PyOpenGL DracoPy
+      - name: Hitung rentang shard
+        run: |
+          echo "START=$(( ${{ matrix.shard }} * 120 ))" >> "$GITHUB_ENV"
+          echo "END=$(( ${{ matrix.shard }} * 120 + 119 ))" >> "$GITHUB_ENV"
+
       - name: Prepare aset Cassini (Draco -> cache)
         working-directory: story-last-signal
         run: python scripts/prepare_story_assets.py
@@ -80,6 +78,9 @@ jobs:
         run: |
           mkdir -p story-last-signal/public/frames story-last-signal/public/sfx
           cp story-last-signal/out/frames/frame_*.png story-last-signal/public/frames/
+      - name: Install Node deps (Remotion)
+        run: npm ci
+
       - name: Render overlay Remotion (PNG transparan)
         working-directory: story-last-signal
         run: |
