@@ -1,0 +1,185 @@
+{
+  "source_glb": "/home/bennyzxhg/video-project/story-last-signal/assets/models/cassini-huygens-a.glb",
+  "triangles": 25736,
+  "vertices_flat": 77208,
+  "unique_vertices": 26647,
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "aluminum",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4953449070453644,
+          0.4953449070453644,
+          0.4953449070453644,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "black_krinkle",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.18431372940540314,
+          0.18431372940540314,
+          0.18431372940540314,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "dish_AO",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "foil_gold",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "foil_gold_2",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "plastic_dark",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.207596555352211,
+          0.207596555352211,
+          0.207596555352211,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "plastic_white",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9269806146621704,
+          0.9269806146621704,
+          0.9269806146621704,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "tex_01",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "per_mesh": [
+    {
+      "mesh": "Cube.003",
+      "material": -1,
+      "triangles": 12,
+      "vertices": 24
+    },
+    {
+      "mesh": "Mesh.108",
+      "material": 0,
+      "triangles": 3148,
+      "vertices": 6580
+    },
+    {
+      "mesh": "Mesh.131",
+      "material": 1,
+      "triangles": 1968,
+      "vertices": 1223
+    },
+    {
+      "mesh": "Mesh.098",
+      "material": 2,
+      "triangles": 2786,
+      "vertices": 3006
+    },
+    {
+      "mesh": "Mesh.010",
+      "material": 3,
+      "triangles": 10517,
+      "vertices": 7207
+    },
+    {
+      "mesh": "Mesh.003",
+      "material": 4,
+      "triangles": 48,
+      "vertices": 80
+    },
+    {
+      "mesh": "Mesh.000",
+      "material": 3,
+      "triangles": 660,
+      "vertices": 338
+    },
+    {
+      "mesh": "Mesh.019",
+      "material": 5,
+      "triangles": 5383,
+      "vertices": 5695
+    },
+    {
+      "mesh": "Mesh.001",
+      "material": 6,
+      "triangles": 1022,
+      "vertices": 2120
+    },
+    {
+      "mesh": "Cube",
+      "material": 7,
+      "triangles": 180,
+      "vertices": 360
+    },
+    {
+      "mesh": "Cube.001",
+      "material": 7,
+      "triangles": 12,
+      "vertices": 14
+    }
+  ],
+  "textures_extracted": [
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/dish_AO_png.webp",
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/dish_AO_png.png",
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/tex_01_.webp",
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/tex_01_.png",
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/foil_gold_ramp.webp",
+    "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/foil_gold_ramp.png"
+  ],
+  "kapton_normal": "/home/bennyzxhg/video-project/story-last-signal/assets/textures/nasa_cassini/tex_01_normal.png"
+}
