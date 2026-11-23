@@ -42,7 +42,12 @@ def init_egl():
     att = (ctypes.c_int * 15)(0x3033, 0x0001, 0x3040, 0x0008, 0x3024, 8, 0x3023, 8, 0x3022, 8, 0x3021, 8, 0x3025, 24, 0x3038)
     cfg = (ctypes.c_void_p * 1)(); num = ctypes.c_int()
     if not lib.eglChooseConfig(disp, att, cfg, 1, ctypes.byref(num)) or num.value < 1:
-        raise RuntimeError("eglChooseConfig gagal")
+        lib.eglGetError.restype = ctypes.c_int
+        err1 = lib.eglGetError()
+        print(f"eglChooseConfig (GL, RENDERABLE_TYPE=0x0008) gagal: eglGetError={err1:#x}, config={num.value}; coba ES (0x0044)", flush=True)
+        att = (ctypes.c_int * 15)(0x3033, 0x0001, 0x3040, 0x0044, 0x3024, 8, 0x3023, 8, 0x3022, 8, 0x3021, 8, 0x3025, 24, 0x3038)
+        if not lib.eglChooseConfig(disp, att, cfg, 1, ctypes.byref(num)) or num.value < 1:
+            raise RuntimeError(f"eglChooseConfig gagal (GL dan ES): eglGetError={lib.eglGetError():#x}")
     ctx = None
     for majv, minv in ((3, 3), (3, 2), (3, 0)):
         catt = (ctypes.c_int * 5)(0x3098, majv, 0x30FB, minv, 0x3038)
